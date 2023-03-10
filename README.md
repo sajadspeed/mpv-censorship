@@ -20,7 +20,7 @@ Create a file with the `.censor` extension of the same name as the film file in 
 └── Film_Example_Name.censor
 ``` 
 
-`Film_Example_Name.censor`:
+Film_Example_Name.censor:
 ``` 
 00:10:55 5
 0:13:30 7
