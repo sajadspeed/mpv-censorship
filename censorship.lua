@@ -107,7 +107,6 @@ function start()
 end
 
 function tick(second)
-	print(second)
 	for key, value in pairs(censorData) do
 		if key == second then
 			mp.commandv('seek', value, "exact")
