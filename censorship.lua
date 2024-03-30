@@ -69,10 +69,10 @@ function start()
 	
 	local censorDataCount = 0
 	for key, value in pairs(fileLines) do
-		valueSanitize = string.match(value, "%d+:%d+:%d+ +%d+")
+		valueSanitize = string.match(value, "%d+:%d+:%d+ %d+:%d+:%d+")
 		if valueSanitize ~= nil then
 			local valueSplit = stringSplit(valueSanitize, " ")
-			censorData[timeToSeconds(valueSplit[1])] = valueSplit[2]
+			censorData[timeToSeconds(valueSplit[1])] = timeToSeconds(valueSplit[2]) - timeToSeconds(valueSplit[1])
 			censorDataCount = censorDataCount + 1
 		else
 			errors[#errors + 1] = value
